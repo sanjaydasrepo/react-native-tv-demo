@@ -8,8 +8,10 @@ const FocusableHighlight = forwardRef((props, ref) => {
   return (
     <TouchableHighlight
       {...props}
-      ref={ref}
+      ref={ref} 
       onPress={(event) => {
+        console.log('event',event.type);
+
         if (event.eventKeyAction !== undefined) {
           setPressed(parseInt(event.eventKeyAction) === 0);
           if (props.onPress) {

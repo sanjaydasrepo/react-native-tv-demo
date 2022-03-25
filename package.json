@@ -5,33 +5,33 @@
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator='Apple TV'",
+    "ios": "react-native run-ios",
+    "iostv": "react-native run-ios --simulator='Apple TV'",
     "web": "react-app-rewired start",
     "web:build": "react-app-rewired build"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
-    "@react-navigation/native": "^5.9.0",
-    "@react-navigation/stack": "^5.13.0",
-    "@react-navigation/web": "^1.0.0-alpha.9",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "^0.63.4",
-    "react-native-gesture-handler": "^1.9.0",
-    "react-native-reanimated": "^1.13.2",
-    "react-native-safe-area-context": "^3.1.9",
-    "react-native-screens": "^2.16.1",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/stack": "^6.1.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-native": "^0.67.4",
+    "react-native-gesture-handler": "^2.3.2",
+    "react-native-reanimated": "^2.5.0",
+    "react-native-safe-area-context": "^4.2.2",
+    "react-native-screens": "^3.13.1",
     "react-native-video": "^5.1.1",
-    "react-native-web": "./react-native-web/packages/react-native-web"
+    "react-native-web": "^0.17.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/runtime": "^7.12.5",
-    "@react-native-community/eslint-config": "^2.0.0",
-    "eslint": "^7.18.0",
-    "metro-react-native-babel-preset": "^0.64.0",
+    "@react-native-community/eslint-config": "^3.0.1",
+    "eslint": "^8.11.0",
+    "metro-react-native-babel-preset": "^0.69.1",
     "react-app-rewired": "^2.1.8",
-    "react-scripts": "^4.0.1"
+    "react-scripts": "^5.0.0"
   },
   "alias": {
     "react-native": "react-native-web"

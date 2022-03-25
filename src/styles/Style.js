@@ -13,14 +13,14 @@ const Style = {
   backgroundColor: '#282c34',
   modalBackgroundColor: '#444c58',
   buttonUnfocusedColor: '#61dafb',
-  buttonFocusedColor: '#fff',
+  buttonFocusedColor: '#000',
   buttonPressedColor: '#ccc',
   px: (size) => {
     return Math.round((size * (height / 1080)) / pixelRatio);
   },
 };
 
-Style.styles = StyleSheet.create({
+Style.styles = StyleSheet.create({ 
   right: {
     backgroundColor: Style.backgroundColor,
     width: Style.px(1520),
