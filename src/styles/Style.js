@@ -15,6 +15,7 @@ const Style = {
   buttonUnfocusedColor: '#61dafb',
   buttonFocusedColor: '#FF6B6B',
   buttonPressedColor: '#ccc',
+ 
   px: (size) => {
     return Math.round((size * (height / 1080)) / pixelRatio);
   },

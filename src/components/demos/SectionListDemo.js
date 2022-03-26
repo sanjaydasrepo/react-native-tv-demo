@@ -142,7 +142,7 @@ const SectionListDemo = () => {
   // Render
   return (
     <View style={Style.styles.content}>
-      <Text style={{fontSize:18,fontWeight:'bold'}}>Videos</Text>
+      <Text style={{fontSize:18,fontWeight:'bold'}}>Home</Text>
       <SectionList
         ref={sectionListRef}
         style={styles.rows}
@@ -180,6 +180,7 @@ const styles = StyleSheet.create({
     marginLeft: Style.px(10),
     color: 'white',
     fontSize: Style.px(40),
+    textTransform:'capitalize'
   },
   text: {
     fontSize: Style.px(40),
