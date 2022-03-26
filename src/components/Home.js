@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <View style={Style.styles.right}>
       <View style={Style.styles.header}>
-        <Text style={Style.styles.headerText}>{'React Native TV Demos'}</Text>
+        <Text style={Style.styles.headerText}>{'Sye Sports'}</Text>
       </View>
       <View style={Style.styles.content} />
     </View>

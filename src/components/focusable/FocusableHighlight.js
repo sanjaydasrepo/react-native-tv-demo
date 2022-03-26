@@ -4,16 +4,14 @@ import {TouchableHighlight, View} from 'react-native';
 const FocusableHighlight = forwardRef((props, ref) => {
   const [focused, setFocused] = useState(false);
   const [pressed, setPressed] = useState(false);
-
-  return (
+ 
+  return ( 
     <TouchableHighlight
       {...props}
       ref={ref} 
       onPress={(event) => {
-        console.log('event',event.type);
-
-        if (event.eventKeyAction !== undefined) {
-          setPressed(parseInt(event.eventKeyAction) === 0);
+        if (event.nativeEvent !== undefined) {
+          setPressed(parseInt(event.nativeEvent) === 0);
           if (props.onPress) {
             props.onPress(event);
           }

@@ -28,7 +28,7 @@ const App = () => {
           <Menu />
           <Content />
           {/* <Text>renderSectionHeader</Text> */}
-        </View>
+        </View> 
       </NavigationContainer>
     </AppProvider>
   );
@@ -38,8 +38,8 @@ export default App;
 
 const styles = StyleSheet.create({
   app: {
-    width: Style.px(1920),
-    height: Style.px(1080),
+    // width: Style.px(1920),
+    // height: Style.px(1080),
     flex: 1,
     flexDirection: 'row',
   },

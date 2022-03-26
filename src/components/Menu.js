@@ -3,7 +3,7 @@ import {View, Text, Image, StyleSheet ,useTVEventHandler, TouchableHighlight,Tou
 import {navigate} from '../Navigation';
 import {AppContext} from '../AppProvider';
 import Style from '../styles/Style';
-import reactLogoImageSource from '../assets/react_logo.png';
+import reactLogoImageSource from '../assets/sye_logo.png';
 import FocusableHighlight from './focusable/FocusableHighlight';
 
 const Menu = () => {
@@ -23,7 +23,8 @@ const Menu = () => {
 //   useTVEventHandler(myTVEventHandler);
 
   function showMenu() {
-    const items = ['Components', 'Events', 'Focus', 'Scroll', 'Input', 'Video'];
+    // const items = ['Components', 'Events', 'Focus', 'Scroll', 'Input', 'Video'];
+    const items = ['Videos','Locations','Languages'];
 
     return items.map((item) => {
       const key = 'menu_' + item.toLowerCase();
@@ -31,20 +32,17 @@ const Menu = () => {
       
       return (
         
-        <TouchableHighlight
-          onPress={() => {
-            console.log('pre')
+        <FocusableHighlight
+          onPress={() => { 
             navigate(route); 
           }}
-          onFocus={()=> console.log('In focus')}
-          onBlur={()=> console.log('In bu')}
           underlayColor={Style.buttonFocusedColor}
           style={styles.menuItem}  
           
           nativeID={key}
           key={key}>
           <Text style={styles.text}>{item}</Text>
-        </TouchableHighlight>
+        </FocusableHighlight>
       );
     });
   }
@@ -53,7 +51,7 @@ const Menu = () => {
   return appContext.menuVisible ? (
     <View style={styles.left}>
       <Image style={styles.logo} source={reactLogoImageSource} />
-      <Text style={styles.title}>{'React Native TV APP'}</Text>
+      <Text style={styles.title}>{'Sye Sports'}</Text>
       <View style={styles.menu}>{showMenu()}</View>
     </View>
   ) : null;
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
   left: {
     backgroundColor: Style.backgroundColor,
     width: Style.px(400),
-    height: Style.px(1080),
+    // height: Style.px(1080),
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -79,11 +77,12 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: Style.px(30),
+    marginBottom: Style.px(40),
     color: 'white',
   },
   menu: {
     width: Style.px(400),
-    height: Style.px(800),
+    // height: Style.px(800),
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
@@ -92,11 +91,12 @@ const styles = StyleSheet.create({
     width: Style.px(300),
     height: Style.px(90),
     margin: Style.px(10),
-    // backgroundColor: Style.buttonUnfocusedColor,
+    backgroundColor: Style.buttonUnfocusedColor,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
     fontSize: Style.px(40),
+    color:'#fff'
   },
 });

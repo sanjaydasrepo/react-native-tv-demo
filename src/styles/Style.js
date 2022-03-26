@@ -13,7 +13,7 @@ const Style = {
   backgroundColor: '#282c34',
   modalBackgroundColor: '#444c58',
   buttonUnfocusedColor: '#61dafb',
-  buttonFocusedColor: '#000',
+  buttonFocusedColor: '#FF6B6B',
   buttonPressedColor: '#ccc',
   px: (size) => {
     return Math.round((size * (height / 1080)) / pixelRatio);
@@ -41,8 +41,8 @@ Style.styles = StyleSheet.create({
     color: 'white',
   },
   content: {
-    width: Style.px(1520),
-    height: Style.px(780),
+    // width: Style.px(1520),
+    // height: Style.px(780),
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',

@@ -10,6 +10,9 @@ import FocusDemo from './demos/FocusDemo';
 import ScrollDemo from './demos/ScrollDemo';
 import InputDemo from './demos/InputDemo';
 import VideoDemo from './demos/VideoDemo';
+import VideosList from './demos/VideosList';
+import LocationList from './demos/LocationList';
+import LangList from './demos/LangList';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +42,9 @@ const Content = () => {
         <Stack.Screen name="scroll" component={ScrollDemo} />
         <Stack.Screen name="input" component={InputDemo} />
         <Stack.Screen name="video" component={VideoDemo} />
+        <Stack.Screen name="videos" component={VideosList} />
+        <Stack.Screen name="locations" component={LocationList} />
+        <Stack.Screen name="languages" component={LangList} />
       </Stack.Navigator>
     </View>
   );
@@ -52,12 +58,16 @@ const styles = StyleSheet.create({
     height: Style.px(1080),
     flex: 1,
     flexDirection: 'row',
+    borderWidth:1,
+    backgroundColor:'#fff'
   },
   navigator: {
     width: Style.px(1520),
     height: Style.px(1080),
+    backgroundColor:'#fff'
   },
   navigatorFullscreen: {
+    backgroundColor:'#fff',
     width: Style.px(1920),
   },
 });

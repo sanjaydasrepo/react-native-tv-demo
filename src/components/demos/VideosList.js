@@ -15,7 +15,7 @@ const SECTIONS = 15;
 const SECTIONS_ROWS = 1;
 const ITEMS = 15;
 
-const SectionListDemo = () => {
+const VideosList = () => {
   const sectionListRef = useRef(null);
   const rowRefs = useRef([]);
 
@@ -87,7 +87,7 @@ const SectionListDemo = () => {
           style={styles.rowItem}
           nativeID={key}
           key={key}>
-          <Text style={styles.text}>{section + '.' + item}</Text>
+          <Text style={styles.text}>{ 'Video '+ (item + 1)}</Text>
         </FocusableHighlight>
       );
     });
@@ -132,7 +132,7 @@ const SectionListDemo = () => {
         rows.push({section: i, row: j});
       }
       sections.push({
-        title: 'Section ' + i,
+        title: 'Section ' + (i + 1),
         data: rows,
       });
     }
@@ -142,7 +142,15 @@ const SectionListDemo = () => {
   // Render
   return (
     <View style={Style.styles.content}>
-      <Text style={{fontSize:18,fontWeight:'bold'}}>Videos</Text>
+      <Text
+        style={{
+          fontSize: 24,
+          fontWeight: 'bold',
+          alignSelf: 'flex-start',
+          padding: 8,
+        }}>
+        Videos
+      </Text>
       <SectionList
         ref={sectionListRef}
         style={styles.rows}
@@ -178,12 +186,13 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: Style.px(5),
     marginLeft: Style.px(10),
-    color: 'white',
+    color: '#FF6B6B',
     fontSize: Style.px(40),
   },
   text: {
     fontSize: Style.px(40),
+    color: '#fff',
   },
 });
 
-export default SectionListDemo;
+export default VideosList;
